@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List App</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 class="title">My Tasks</h1>
+            <p class="subtitle">Stay organized and productive</p>
+        </header>
+
+        <main class="main">
+            <!-- Add Task Form -->
+            <form class="add-task-form" id="addTaskForm">
+                <div class="input-group">
+                    <input 
+                        type="text" 
+                        id="taskInput" 
+                        class="task-input" 
+                        placeholder="Add a new task..."
+                        maxlength="200"
+                    >
+                    <button type="submit" class="add-btn" id="addBtn">
+                        <span class="add-icon">+</span>
+                        Add Task
+                    </button>
+                </div>
+                <div class="error-message" id="errorMessage"></div>
+            </form>
+
+            <!-- Task Statistics -->
+            <div class="task-stats">
+                <div class="stat">
+                    <span class="stat-number" id="totalTasks">0</span>
+                    <span class="stat-label">Total</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number" id="completedTasks">0</span>
+                    <span class="stat-label">Completed</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number" id="pendingTasks">0</span>
+                    <span class="stat-label">Pending</span>
+                </div>
+            </div>
+
+            <!-- Task List -->
+            <div class="task-list-container">
+                <div class="task-list-header">
+                    <h2>Your Tasks</h2>
+                    <button class="clear-completed-btn" id="clearCompletedBtn">
+                        Clear Completed
+                    </button>
+                </div>
+                <ul class="task-list" id="taskList">
+                    <!-- Tasks will be dynamically added here -->
+                </ul>
+                <div class="empty-state" id="emptyState">
+                    <div class="empty-icon">📝</div>
+                    <h3>No tasks yet</h3>
+                    <p>Add your first task above to get started!</p>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
